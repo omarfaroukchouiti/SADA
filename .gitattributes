@@ -1,0 +1,11 @@
+# Keep the canonical Tanzil source byte-for-byte identical to the downloaded file.
+data/quran/quran-uthmani-tanzil-v1.1.txt -text
+
+# Normalize source code to LF in the repository.
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.md text eol=lf

@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-11-20T20:04:18.322Z",
+  "text": {
+    "provider": "Tanzil Project",
+    "edition": "Uthmani",
+    "version": "1.1",
+    "sourceUrl": "https://tanzil.net/download/",
+    "file": "quran-uthmani-tanzil-v1.1.txt",
+    "sha256": "aa0bf9278a177a12e6d9bef621ce37a1d24fa35168b5ae9c13ebcbe01e3686cf",
+    "bytes": 1409970,
+    "attribution": "Quran text provided by Tanzil Project — https://tanzil.net",
+    "license": "Verbatim copying permitted with visible attribution; text must not be altered."
+  },
+  "metadata": {
+    "provider": "UmmahAPI",
+    "sourceUrl": "https://ummahapi.com/api/quran/surahs, https://ummahapi.com/api/quran/juz/{1..30}",
+    "usage": "Surah names, revelation place, page ranges and juz mapping only. Arabic text is not taken from this provider."
+  },
+  "validation": {
+    "surahCount": 114,
+    "ayahCount": 6236,
+    "emptyTextCount": 0,
+    "juzMappedCount": 6236
+  }
+}

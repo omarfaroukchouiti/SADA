@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-low: var(--surface-low);
+  --color-surface-mid: var(--surface-mid);
+  --color-surface-high: var(--surface-high);
+  --color-elevated: var(--elevated);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary: var(--on-primary);
+  --color-secondary: var(--secondary);
+  --color-gold: var(--gold);
+  --color-line: var(--line);
+  --font-ui: var(--font-ui);
+  --font-quran: var(--font-quran);
+  --font-display: var(--font-display);
+}
+
+:root {
+  --canvas: #fcf9f4;
+  --surface: #f6f3ee;
+  --surface-low: #f0ede9;
+  --surface-mid: #ebe8e3;
+  --surface-high: #e5e2dd;
+  --elevated: #ffffff;
+  --ink: #1c1c19;
+  --ink-soft: #404944;
+  --ink-muted: #5f6a64;
+  --primary: #003527;
+  --primary-container: #064e3b;
+  --on-primary: #ffffff;
+  --secondary: #9b4500;
+  --gold: #b8873c;
+  --line: #e5e2dd;
+  --font-ui: 'Noto Sans Arabic', system-ui, sans-serif;
+  --font-quran: 'Noto Naskh Arabic', 'Amiri', serif;
+  --font-display: 'Amiri', 'Noto Serif Arabic', serif;
+  --shadow-panel: 0 12px 32px -12px rgba(0, 20, 14, 0.18);
+}
+
+.dark {
+  --canvas: #0d1514;
+  --surface: #151d1c;
+  --surface-low: #111c1a;
+  --surface-mid: #232c2a;
+  --surface-high: #2e3635;
+  --elevated: #162421;
+  --ink: #dce4e2;
+  --ink-soft: #bfc9c3;
+  --ink-muted: #9ca3af;
+  --primary: #95d3ba;
+  --primary-container: #1e3b31;
+  --on-primary: #0d1514;
+  --secondary: #ffb77d;
+  --gold: #f9bd22;
+  --line: #1e322d;
+  --shadow-panel: 0 12px 32px -12px rgba(0, 0, 0, 0.55);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--primary-container);
+  color: var(--on-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-quran {
+  font-family: var(--font-quran);
+}
+
+.quran-text {
+  font-family: var(--font-quran);
+  line-height: 2;
+  letter-spacing: 0;
+}
+
+.surface-card {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+.panel-shadow {
+  box-shadow: var(--shadow-panel);
+}
+
+.verified-note {
+  color: var(--ink-muted);
+  font-size: 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
