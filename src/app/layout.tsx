@@ -6,7 +6,16 @@ import { SiteHeader } from '@/components/layout/site-header';
 import { BottomNav } from '@/components/layout/bottom-nav';
 import SiteFooter from '@/components/layout/site-footer';
 
+function siteUrl(): URL {
+  try {
+    return new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000');
+  } catch {
+    return new URL('http://localhost:3000');
+  }
+}
+
 export const metadata: Metadata = {
+  metadataBase: siteUrl(),
   title: 'SADA — صدى',
   description: 'منصة إسلامية مجانية للقرآن الكريم والتلاوات والتفسير',
 };

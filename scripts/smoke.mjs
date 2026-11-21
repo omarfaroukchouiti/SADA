@@ -1,5 +1,5 @@
 // Lightweight smoke test for the Phase 1 SADA app.
-const base = process.env.SADA_BASE ?? 'http://localhost:3100';
+const base = process.env.SADA_BASE ?? 'http://localhost:3000';
 const routes = [
   '/', '/quran', '/quran/1', '/quran/1/1', '/audio', '/tafsir', '/search',
   '/api/quran/surahs', '/api/quran/surahs/1', '/api/quran/verses/1/1',

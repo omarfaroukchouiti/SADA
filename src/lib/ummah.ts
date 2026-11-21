@@ -2,7 +2,7 @@ import 'server-only';
 import { cached, TTL } from './cache';
 import type { ApiEnvelope, AudioTrack, Provenance, Reciter, TafsirEntry, TafsirSource } from './types';
 
-const BASE = 'https://ummahapi.com/api';
+const BASE = (process.env.UMMAHAPI_BASE_URL ?? 'https://ummahapi.com/api').replace(/\/$/, '');
 const TIMEOUT_MS = 12_000;
 
 type RawReciter = { id: number; name: string; name_arabic: string; style: string };
